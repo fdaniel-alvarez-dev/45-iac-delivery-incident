@@ -1,0 +1,17 @@
+{
+  "name": "main",
+  "stages": [
+    { "name": "lint", "required": true },
+    { "name": "test", "required": true },
+    { "name": "plan", "required": true },
+    { "name": "apply", "required": true }
+  ],
+  "release": {
+    "requires_approval": false
+  },
+  "metrics": {
+    "success_rate_30d": 0.92,
+    "median_duration_seconds": 1120,
+    "flaky_test_rate": 0.07
+  }
+}

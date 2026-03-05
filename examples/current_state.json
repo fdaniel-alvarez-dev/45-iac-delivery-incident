@@ -1,0 +1,29 @@
+{
+  "resources": [
+    {
+      "id": "bucket-audit-logs",
+      "type": "bucket",
+      "owner": "platform",
+      "environment": "prod",
+      "change_id": "CHG-2026-0001",
+      "public": false,
+      "settings": {
+        "encryption": true,
+        "versioning": false,
+        "retention_days": 30
+      }
+    },
+    {
+      "id": "db-orders",
+      "type": "database",
+      "owner": "payments",
+      "environment": "production",
+      "change_id": "CHG-2026-0099",
+      "public": false,
+      "settings": {
+        "encryption": false,
+        "multi_az": true
+      }
+    }
+  ]
+}

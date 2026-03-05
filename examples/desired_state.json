@@ -1,0 +1,41 @@
+{
+  "resources": [
+    {
+      "id": "bucket-audit-logs",
+      "type": "bucket",
+      "owner": "platform",
+      "environment": "prod",
+      "change_id": "CHG-2026-0001",
+      "public": false,
+      "settings": {
+        "encryption": true,
+        "versioning": true,
+        "retention_days": 90
+      }
+    },
+    {
+      "id": "db-orders",
+      "type": "database",
+      "owner": "payments",
+      "environment": "prod",
+      "change_id": "CHG-2026-0002",
+      "public": false,
+      "settings": {
+        "encryption": true,
+        "multi_az": true
+      }
+    },
+    {
+      "id": "svc-payments-api",
+      "type": "service",
+      "owner": "payments",
+      "environment": "prod",
+      "change_id": "CHG-2026-0003",
+      "public": true,
+      "settings": {
+        "min_replicas": 2,
+        "max_replicas": 8
+      }
+    }
+  ]
+}

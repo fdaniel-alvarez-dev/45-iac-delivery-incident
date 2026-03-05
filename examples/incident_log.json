@@ -1,0 +1,47 @@
+{
+  "incidents": [
+    {
+      "id": "INC-1001",
+      "service": "payments-api",
+      "severity": 1,
+      "started_at": "2026-01-12T03:04:00Z",
+      "resolved_at": "2026-01-12T03:38:00Z",
+      "root_cause": "db-connection-pool-exhaustion",
+      "runbook_used": "docs/runbooks/03_incident_response_and_mttr.md",
+      "postmortem": {
+        "completed": true,
+        "followups": [
+          { "id": "FU-1", "owner": "db-team", "due_date": "2026-01-26", "status": "done" }
+        ]
+      }
+    },
+    {
+      "id": "INC-1002",
+      "service": "payments-api",
+      "severity": 2,
+      "started_at": "2026-02-03T18:11:00Z",
+      "resolved_at": "2026-02-03T19:05:00Z",
+      "root_cause": "db-connection-pool-exhaustion",
+      "runbook_used": null,
+      "postmortem": {
+        "completed": false,
+        "followups": [
+          { "id": "FU-2", "owner": "payments", "due_date": "2026-02-10", "status": "open" }
+        ]
+      }
+    },
+    {
+      "id": "INC-1003",
+      "service": "frontend",
+      "severity": 3,
+      "started_at": "2026-02-14T09:00:00Z",
+      "resolved_at": "2026-02-14T09:12:00Z",
+      "root_cause": "cache-misconfiguration",
+      "runbook_used": "docs/runbooks/03_incident_response_and_mttr.md",
+      "postmortem": {
+        "completed": true,
+        "followups": []
+      }
+    }
+  ]
+}
